@@ -1,0 +1,301 @@
+:root{
+	--Black: #000000;
+	--Dark: red;
+	--White: #fff;
+	--Light: #aaa;
+}
+
+body{
+	margin: auto 0;
+	padding: 0;
+	background-color: var(--Black);
+}
+
+::-webkit-scrollbar {
+	background: var(--Black);
+	width: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, var(--Black), var(--Dark));
+	border-radius: 10px;
+}
+
+.back img{
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	object-fit: cover;
+	z-index: -1;
+}
+.cls-1, .cls-2 {
+	fill: var(--Dark);
+}
+
+.cls-2 {
+	font-size: 16px;
+	font-family: StelaUT, Stela UT;
+	letter-spacing: -0.01599em;
+}
+
+.cls-3 {
+	fill: var(--White);
+}
+
+.cls-4 {
+	fill: none;
+	stroke: var(--Dark);
+	stroke-miterlimit: 10;
+}
+.name {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	width: 300px;
+	height: auto;
+}
+.title {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 20px;
+	text-align: center;
+	color: var(--White);
+}
+
+/* About */
+
+.aboutme {
+	margin: 0;
+	padding: 0;
+	background-color: var(--White);
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 100%;
+	display: block;
+}
+.aboutme h2 {
+	margin: 0 auto;
+	padding: 30px 0px 20px 0px;
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+}
+.aboutme p {
+	margin: 0 auto;
+	padding: 0px 20px 60px 20px;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+}
+
+/* CV */
+
+.downloadcv {
+	margin: 0 auto;
+	margin-bottom: 25px;
+	padding: 0;
+	display: block;
+	width: 200px;
+	height: auto;
+	text-align: center;
+}
+
+
+.downloadcv a {
+	margin: 0 auto;
+	padding: 10px;
+	width: 170px;
+	height: auto;
+	text-decoration: none;
+	font-size: 14px;
+	background-color: var(--Black);
+	color: var(--White);
+	-webkit-transition: color .5s;
+    transition: color .5s;
+    -webkit-transition: border-color .5s;
+    transition: border-color .5s;
+    font-family: 'Julius Sans One', sans-serif;
+	border: 2px solid var(--Black);
+	border-radius: 50px;
+}
+
+.downloadcv a:hover {
+	border-color: 2px solid var(--Dark);
+	color: var(--Dark);
+}
+
+/* Contact */
+
+.share {
+  display: block;
+  width: 51px;
+  height: 51px;
+  background: var(--White);
+  position: fixed;
+  top: 25px;
+  right: 7%;
+  z-index: 3;
+  text-align: center;
+  overflow: hidden;
+  line-height: 50px;
+  font-size: 1.5em;
+  color: var(--Black);
+  border-radius: 50px;
+  border: 2px solid var(--Black);
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.share:hover {
+  cursor: pointer;
+  background-color: var(--Dark);
+}
+
+.one,
+.two,
+.three,
+.four,
+.five {
+  position: fixed;
+  width: 49px;
+  height: 49px;
+  color: #fff;
+  border-radius: 50px;
+  border: 2px solid var(--White);
+  text-align: center;
+  line-height: 47px;
+  font-size: 1.5em;
+  top: 26px;
+  right: 7%;
+  z-index: 2;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transition: border .5s;
+  transition: border .5s;
+}
+
+.one:hover,
+.two:hover,
+.three:hover,
+.four:hover,
+.five:hover {
+  cursor: pointer;
+  border: 2px solid var(--Dark);
+}
+
+.one a,
+.two a,
+.three a,
+.four a,
+.five a {
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--White);
+}
+
+.one i,
+.two i,
+.three i,
+.four i,
+.five i {
+  display: none;
+}
+.one {
+  background: var(--Black);
+}
+.two {
+  background: var(--Black);
+}
+.three {
+  background: var(--Black);
+}
+.four {
+  background: var(--Black);
+}
+.five {
+  background: var(--Black);
+}
+
+/* Navbar */
+
+.navbaricon {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 7%;
+  z-index: 2;
+  text-align: center;
+  overflow: hidden;
+  line-height: 55px;
+  font-size: 30px;
+  color: var(--White);
+  text-shadow: 0 0 6px var(--Black);
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+.navbaricon:hover {
+  cursor: pointer;
+  color: var(--Dark);
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* code for desktop users */
+
+@media only screen and (min-width: 400px) {
+	
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+}
+
+
+@media only screen and (min-width: 1100px) {
+
+}

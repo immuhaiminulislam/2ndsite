@@ -1,0 +1,105 @@
+:root{
+	--Black: #000000;
+	--Dark: red;
+	--White: #fff;
+	--Light: #aaa;
+}
+
+body{
+	margin: auto 0;
+	padding: 0;
+	background-color: var(--Black);
+}
+
+::-webkit-scrollbar {
+	background: var(--Black);
+	width: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, var(--Black), var(--Dark));
+	border-radius: 10px;
+}
+
+.work {
+	max-width: 400px;
+	height: auto;
+	margin: 0 auto;
+	top: 10px;
+	background-color: var(--White);
+	text-align: center;
+	box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	position: relative;
+	margin-bottom: 10px;
+
+}
+
+.work h1 {
+	margin: 0;
+	padding: 10px;
+	font-size: 20px;
+	color: var(--Dark);
+	font-family: StelaUT, Stela UT;
+}
+
+.work hr {
+	margin-top: 0;
+}
+
+.work figure {
+	margin: 0 auto;
+	margin-bottom: 20px;
+	width: 80%;
+	overflow: hidden;
+	-webkit-transition: background-color .5s;
+    transition: background-color .5s;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+}
+
+.work a {
+	text-decoration: none;
+}
+
+.work figure img {
+	width: 100%;
+	height: auto;
+	-webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+.work figure:hover {
+	background-color: var(--Dark);
+	
+}
+
+.work figure img:hover {
+	opacity: 0.6;
+}
+
+.work figcaption {
+	text-decoration: none;
+	font-size: 13px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--Black);
+	padding: 20px 0;
+}
+
+
+
+/* code for desktop users */
+
+@media only screen and (min-width: 400px) {
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+}

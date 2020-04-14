@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="Description" content="Muhaiminul Islam Resume" />
+		<meta name="theme-color" content="#3aafa9"/>
+		<title>Muhaiminul Islam</title>
+		<link rel="icon" type="image/png" href="images/mylogo.png" />
+
+		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Arvo|Lilita+One|Megrim|New+Rocker" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Oswald&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+		<link rel="stylesheet" href="src/leaflet.awesome-markers.css" />
+		<link rel="stylesheet" type="text/css" href="Assets/css/style.css" />
+
+
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+		<script src="src/leaflet-providers.js"></script>
+		<script src="src/leaflet.ajax.min.js"></script>
+		<script src="src/leaflet.awesome-markers.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/e29aecaa4e.js" crossorigin="anonymous"></script>
+
+
+		<style>
+			body {
+				margin: 0 auto;
+				padding: 0;
+			}
+
+            #mapdiv {
+                height:100vh;
+                display: block;
+             	z-index: 1;
+            }
+
+            .lyr {
+            	font-size: 20px;
+            	padding: 5px;
+            }
+
+            .job {
+            	margin: 0;
+            	padding: 0;
+            	text-align: right;
+            }
+
+            .job h3 {
+            	font-size: 14px;
+            	font-family: 'Arvo', serif;
+            	font-weight: bold;
+            	color: #17252a
+            }
+
+            .date {
+            	font-size: 12px;
+            	font-family: 'Arvo', serif;
+            	color: #3aafa9;
+            }
+
+            .date i {
+            	margin-right: 10px;
+            }
+
+            .details {
+            	font-size: 12px;
+            	font-family: 'Arvo', serif;
+            	color: #17252a;
+            	text-align: justify;
+            }
+
+        </style>
+	</head>
+	<body>
+		
+		<div id="mapdiv"></div>
+
+		<div id="myNav" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<a href="index.html">about me</a>
+				<a href="mywork.html">some works</a>
+				<a href="#">my map</a>
+			</div>
+		</div>
+		<span class="navbaricon" onclick="openNav()"><i class="fas fa-bars"></i></span>
+
+		<div class="share">
+			<i class="fas fa-paper-plane"></i>
+		</div>
+		<div class="one">
+			<a href="mailto: muhaiminul.ankon@gmail.com"><i class="fas fa-envelope"></i><span style="display: none;">muhaiminul.ankon@gmail.com</span></a>
+		</div>
+		<div class="two">
+			<a href="tel: +8801521201073"><i class="fas fa-phone-square"></i><span style="display: none;">+880 1521 201073</span></a>
+		</div>
+		<div class="three">
+			<a href="https://www.linkedin.com/in/immuhaiminulislam/" target="_blank"><i class="fab fa-linkedin"></i><span style="display: none;">linkedin.com/in/immuhaiminulislam/</span></a>
+		</div>
+		<div class="four">
+			<a href="https://www.instagram.com/immuhaiminulislam/" target="_blank"><i class="fab fa-instagram"></i><span style="display: none;">linkedin.com/in/immuhaiminulislam/</span></a>
+		</div>
+		<div class="five">
+			<a href="https://www.facebook.com/immuhaiminulislam/" target="_blank"><i class="fab fa-facebook"></i><span style="display: none;">linkedin.com/in/immuhaiminulislam/</span></a>
+		</div>
+
+
+
+
+
+
+		<script>
+			function openNav() {
+				document.getElementById("myNav").style.width = "100%";
+			}
+
+			function closeNav() {
+				document.getElementById("myNav").style.width = "0%";
+			}
+		</script>
+		<script>
+			$(function () {
+				var flag = 0;
+
+				$(".share").on("click", function () {
+					if (flag == 0) {
+						$(this).siblings(".one").animate(
+							{top: "80px"},
+							200
+							);
+
+						$(this).siblings(".two").delay(200).animate(
+							{top: "135px"},
+							200
+							);
+
+						$(this).siblings(".three").delay(300).animate(
+							{top: "190px"},
+							200
+							);
+
+						$(this).siblings(".four").delay(400).animate(
+							{top: "245px"},
+							200
+							);
+
+						$(this).siblings(".five").delay(500).animate(
+							{top: "300px"},
+							200
+							);
+
+						$(".one i,.two i, .three i, .four i, .five i").delay(600).fadeIn(200);
+						flag = 1;
+					} else {
+						$(".one, .two, .three, .four, .five").animate(
+							{top: "26px", right: "7%"},
+							200
+							);
+
+						$(".one i,.two i, .three i, .four i, .five i").delay(600).fadeOut(200);
+						flag = 0;
+					}
+				});
+			});
+		</script>
+		<script>
+			var mymap;
+			var light;
+            var dark;
+            var lyrCtrl;
+            var objBasemaps;
+            var objOverlays;
+            var lyrHome;
+            var lyrWork;
+            var lyrEducation;
+            var lyrTravel;
+            
+            
+            $(document).ready(function(){
+                mymap = L.map('mapdiv', {attributionControl: false, center:[23.799541, 90.368477], zoomControl:false, zoom:9});
+                dark = L.tileLayer.provider('CartoDB.DarkMatter');
+                light = L.tileLayer.provider('OpenStreetMap.Mapnik');
+                mymap.addLayer(light);
+
+                
+
+                lyrHome = L.geoJSON.ajax('src/Home.geojson', {pointToLayer: returnHome}).addTo(mymap);
+                lyrWork = L.geoJSON.ajax('src/Work.geojson', {pointToLayer: returnWork}).addTo(mymap);
+                lyrEducation = L.geoJSON.ajax('src/Education.geojson', {pointToLayer: returnEducation}).addTo(mymap);
+                lyrTravel = L.geoJSON.ajax('src/Travel.geojson', {pointToLayer: returnTravel});
+
+                
+
+                objBasemaps = {
+                	"<span class='lyr'>Light</span>": light,
+                	"<span class='lyr'>Dark</span>": dark
+                	
+                };
+                objOverlays = {
+                	"<span class='lyr'>Home</span>": lyrHome,
+                	"<span class='lyr'>Work</span>": lyrWork,
+                	"<span class='lyr'>Education</span>": lyrEducation,
+                	"<span class='lyr'>Travel</span>": lyrTravel
+                };
+
+                lyrCtrl = L.control.layers(objBasemaps, objOverlays, {position: 'bottomright'}).addTo(mymap);
+            });
+
+            function returnHome(json, latlng){
+            	var att = json.properties;
+            	var homeIcon = L.icon({
+            		iconUrl: 'src/images/home.png',
+            		iconSize: [40, 40]
+            	});
+            	return L.marker(latlng, {icon: homeIcon}).bindPopup("<h4>"+att.Name+"</h4>");
+            }
+            function returnTravel(json, latlng){
+
+            	return L.circleMarker(latlng, {color:'deeppink'});
+            }
+            function returnEducation(json, latlng){
+            	var att = json.properties;
+            	var eduIcon = L.AwesomeMarkers.icon({
+            		icon: 'user-graduate',
+            		prefix: 'fa',
+            		markerColor: 'cadetblue',
+            		iconColor: 'white'
+            	});
+
+            	return L.marker(latlng, {icon: eduIcon}).bindPopup("<div class='job'><h3>"+att.Degree+" | "+att.Name+"</h3><p class='date'><i class='far fa-calendar-alt'></i>"+att.Date+"</p></div>");
+            }
+            function returnWork(json, latlng){
+            	var att = json.properties;
+            	var eduIcon = L.AwesomeMarkers.icon({
+            		icon: 'briefcase',
+            		prefix: 'fa',
+            		markerColor: 'red',
+            		iconColor: 'white'
+            	});
+
+            	return L.marker(latlng, {icon: eduIcon}).bindPopup("<div class='job'><h3>"+att.Position+" | "+att.Name+"</h3><p class='date'><i class='far fa-calendar-alt'></i>"+att.Date+"</p><p class='details'>"+att.Responsibilities+"</p></div>");
+            }
+
+
+            
+
+		</script>
+	</body>
+</html>

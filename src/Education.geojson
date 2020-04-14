@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "Education",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Jahangirnagar University, Dhaka", "Date": "October 2019 – ||Present||", "Degree": "Master of Science, GIS for Environment and Development" }, "geometry": { "type": "Point", "coordinates": [ 90.2705, 23.88052 ] } },
+{ "type": "Feature", "properties": { "Name": "Khulna University, Khulna", "Date": "March 2015 – January 2019", "Degree": "Bachelor’s Degree, Urban & Rural Planning" }, "geometry": { "type": "Point", "coordinates": [ 89.53458, 22.80256 ] } },
+{ "type": "Feature", "properties": { "Name": "Monipur High School & College, Dhaka", "Date": "January 2002 – March 2012", "Degree": "SSC" }, "geometry": { "type": "Point", "coordinates": [ 90.36369, 23.80018 ] } },
+{ "type": "Feature", "properties": { "Name": "BAF Shaheen College, Dhaka", "Date": "April 2012 – April 2014", "Degree": "HSC, Science" }, "geometry": { "type": "Point", "coordinates": [ 90.39084, 23.77624 ] } }
+]
+}
