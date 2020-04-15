@@ -70,6 +70,15 @@
             	text-align: justify;
             }
 
+            .leaflet-bottom {
+            	bottom: 25px;
+            }
+
+            .leaflet-right {
+            	right: 7%;
+            }
+
+
         </style>
 	</head>
 	<body>
@@ -104,9 +113,6 @@
 		<div class="five">
 			<a href="https://www.facebook.com/immuhaiminulislam/" target="_blank"><i class="fab fa-facebook"></i><span style="display: none;">linkedin.com/in/immuhaiminulislam/</span></a>
 		</div>
-
-
-
 
 
 
@@ -205,6 +211,7 @@
                 };
 
                 lyrCtrl = L.control.layers(objBasemaps, objOverlays, {position: 'bottomright'}).addTo(mymap);
+
             });
 
             function returnHome(json, latlng){
