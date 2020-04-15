@@ -71,7 +71,7 @@
             }
 
             .leaflet-bottom {
-            	bottom: 25px;
+            	bottom: 10%;
             }
 
             .leaflet-right {
@@ -184,7 +184,7 @@
             
             
             $(document).ready(function(){
-                mymap = L.map('mapdiv', {attributionControl: false, center:[23.799541, 90.368477], zoomControl:false, zoom:9});
+                mymap = L.map('mapdiv', {attributionControl: false, center:[23.799541, 90.368477], zoomControl:false, zoom:8});
                 dark = L.tileLayer.provider('CartoDB.DarkMatter');
                 light = L.tileLayer.provider('OpenStreetMap.Mapnik');
                 mymap.addLayer(light);
