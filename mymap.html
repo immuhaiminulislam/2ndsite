@@ -40,6 +40,34 @@
             	padding: 5px;
             }
 
+            .checkicon, .radioicon {
+            	display: inline-block;
+            	width: 12px;
+            	height: 12px;
+            	border: 2px solid var(--Black);
+            }
+
+            .checkicon {
+            	border-radius: 5px;
+            }
+
+
+            .radioicon {
+            	border-radius: 12px;
+            }
+
+            input[type='checkbox'], input[type='radio'] {
+            	display: none;
+            }
+
+            input:checked + span .lyr {
+            	color: var(--Dark);
+            }
+
+            input:checked + span .checkicon, input:checked + span .radioicon {
+            	background-color: var(--Dark);
+            }
+
             .job {
             	margin: 0;
             	padding: 0;
@@ -84,6 +112,7 @@
 	<body>
 		
 		<div id="mapdiv"></div>
+
 
 		<div id="myNav" class="overlay">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -199,15 +228,15 @@
                 
 
                 objBasemaps = {
-                	"<span class='lyr'>Light</span>": light,
-                	"<span class='lyr'>Dark</span>": dark
+                	"<div class='radioicon'></div><span class='lyr'>Light</span>": light,
+                	"<div class='radioicon'></div><span class='lyr'>Dark</span>": dark
                 	
                 };
                 objOverlays = {
-                	"<span class='lyr'>Home</span>": lyrHome,
-                	"<span class='lyr'>Work</span>": lyrWork,
-                	"<span class='lyr'>Education</span>": lyrEducation,
-                	"<span class='lyr'>Travel</span>": lyrTravel
+                	"<div class='checkicon'></div><span class='lyr'>Home</span>": lyrHome,
+                	"<div class='checkicon'></div><span class='lyr'>Work</span>": lyrWork,
+                	"<div class='checkicon'></div><span class='lyr'>Education</span>": lyrEducation,
+                	"<div class='checkicon'></div><span class='lyr'>Travel</span>": lyrTravel
                 };
 
                 lyrCtrl = L.control.layers(objBasemaps, objOverlays, {position: 'bottomright'}).addTo(mymap);
